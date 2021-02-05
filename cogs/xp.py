@@ -53,8 +53,8 @@ class xp(commands.Cog):
                 mydb.commit()
                 print('Updated...')
 
-    @commands.command()
-    async def xp(self, ctx):
+    @commands.command(name='balance', help='Returns your balance')
+    async def balance(self, ctx):
         cursor = mydb.cursor(buffered=True)
 
         cursor.execute('SELECT user_xp FROM users WHERE client_id = ' + str(ctx.author.id))
@@ -69,9 +69,9 @@ class xp(commands.Cog):
 
 
 
-            print(f'{ctx.author.name} has ' + str(currentXP) + ' xp')
+            print(f'{ctx.author.name} has $' + str(currentXP) + '')
 
-            await ctx.send(f'{ctx.author.name} has ' + str(currentXP) + ' xp')
+            await ctx.send(f'{ctx.author.name} has **$' + str(currentXP) + '**')
 
         else:
             mydb.commit()

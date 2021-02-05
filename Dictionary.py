@@ -198,6 +198,9 @@ dict={
      "Summoner Spell Flash": 791088374835445812,
      "Summoner Spell Teleport": 791088374748282880,
      "Unranked": 791349848561025094,
+     "redarrowdown": 796806879879757844,
+     "greenarrowup": 796806879878709311,
+     "neutral": 796807665422303272
 
 
 
